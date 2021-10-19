@@ -17,8 +17,8 @@ class CsrfExemptSessionAuthentication(SessionAuthentication):
 @method_decorator(csrf_exempt, name='dispatch')
 class CollegeAPI(APIView):
     authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+    
     @csrf_exempt
-    @api_view(['POST'])
     def post(self, request, *args, **kwargs):
         authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
         request_body = request.data
