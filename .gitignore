@@ -1,0 +1,12 @@
+# Unwanted files
+__pycache__/
+
+# Django-environ environment
+*.env
+
+# Other environment
+*.envrc
+
+# Python environment
+Pipfile
+Pipfile.lock
